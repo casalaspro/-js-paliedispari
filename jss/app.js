@@ -46,7 +46,9 @@ Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andia
 
 // inserisco in una costante un valore booleano se pari o dispari dall'utente
 let userSideString = prompt("Scegliere pari o dispari scrivendo la relativa parola");
+// creo variabile per il valore booleano del ruolo scelto
 let userSideBool;
+// ciclo di controllo e assegnazione valore
 while(userSideBool === undefined){
 if(typeof userSideString === "string"){
   if(userSideString === "pari"){
@@ -58,8 +60,10 @@ if(typeof userSideString === "string"){
   }
 }
 }
+// parsifico in intero il numero ricevuto dal prompt
 let userNumber = parseInt(prompt("Scegliere un numero da 1 a 5."));
 let userNumberCheck = false;
+// controllo che il numero sia nel range giusto
 while(userNumberCheck === false){
   if(0<userNumber<6){
     userNumberCheck = true;
@@ -67,9 +71,12 @@ while(userNumberCheck === false){
     userNumber = parseInt(prompt("Scelta errata. Scegliere un numero da 1 a 5."));
   }
 }
+// funzione di generazione numero random che riceve un numero minimo ed un numero massimo
 function getRandomNumber(min, max){
+  // return del numero
   return parseInt(Math.random()*max+min);
 }
+// check della funzione
 console.log(getRandomNumber(1, 5));
 // inserisco in una costante ciò che è ricevuto dal prompt (un numero da 1 a 5)
 // inserisco in una costante un numero random da 1 a 5 usando una funzione
