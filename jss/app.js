@@ -17,30 +17,28 @@ Scriviamo sempre in italiano i passaggi che vogliamo fare
 Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 */
 
-// // PALINDROMA
-// // Creare una variabile che riceva un prompt con scritto "Inserire una parola:"
-// const insertWord = prompt("Inserire una parola:");
+// PALINDROMA
+// Creare una variabile che riceva un prompt con scritto "Inserire una parola:"
+const insertWord = prompt("Inserire una parola:");
 
-// // Creare una funzione che riceva stringa userString e la confronti con la sua copia invertita
-// function palindromeCheck(userString){
-//   // si renda minuscola la stringa con il metodo .toLowerCase()
-//   const userStringToLow = userString.toLowerCase();
-//   // variabile const reverseArray = si applichi il metodo .toReversed() (metodo non distruttivo di .reverse())
-//   const reverseArray = Array.prototype.toReversed.call(userStringToLow);
+// Creare una funzione che riceva stringa userString e la confronti con la sua copia invertita
+function palindromeCheck(userString){
+  // si renda minuscola la stringa con il metodo .toLowerCase()
+  const userStringToLow = userString.toLowerCase();
+  // variabile const reverseArray = si applichi il metodo .toReversed() (metodo non distruttivo di .reverse())
+  const reverseArray = Array.prototype.toReversed.call(userStringToLow);
   
-//   let reverseString = "";
-//   // faccio tornare reverseArray una stringa
-//   for(let i = 0; i<reverseArray.length; i++){
-//     reverseString += reverseArray[i];
-//   }
-//   // ritorno il valore booleano dato dal confronto delle due stringhe
-//   return userStringToLow === reverseString;
+  let reverseString = "";
+  // faccio tornare reverseArray una stringa
+  for(let i = 0; i<reverseArray.length; i++){
+    reverseString += reverseArray[i];
+  }
+  // ritorno il valore booleano dato dal confronto delle due stringhe
+  return userStringToLow === reverseString;
+}
 
-  
-// }
-
-// // Invoco la funzione all'interno di console.log con argomento funzione insertWord (la parola inserita dal prompt)
-// console.log(palindromeCheck(insertWord));
+// Invoco la funzione all'interno di console.log con argomento funzione insertWord (la parola inserita dal prompt)
+console.log(palindromeCheck(insertWord));
 
 // PARI E DISPARI
 
