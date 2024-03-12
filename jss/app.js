@@ -19,7 +19,7 @@ Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andia
 // PALINDROMA
 // Creare una variambile che riceva un prompt con scritto "Inserire una parola:"
 // Creare una funzione che riceva stringa userString e la confronti con la sua copia invertita
-  // si renda minuscola la stringa
+  // si renda minuscola la stringa con il metodo .toLowerCase()
   // variabile const revString = si applichi il metodo .toReversed() (metodo non distruttivo di .reverse())
   // return userString === revString
 // Invocare la funzione con il risultato del prompt
