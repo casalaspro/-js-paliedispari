@@ -71,6 +71,7 @@ while(userNumberCheck === false){
     userNumber = parseInt(prompt("Scelta errata. Scegliere un numero da 1 a 5."));
   }
 }
+console.log(`Hai scelto il numero: ${userNumber}.`)
 // funzione di generazione numero random che riceve un numero minimo ed un numero massimo
 function getRandomNumber(min, max){
   // return del numero
@@ -80,8 +81,10 @@ function getRandomNumber(min, max){
 console.log(getRandomNumber(1, 5));
 
 const botNumber = getRandomNumber(1, 5);
+console.log(`Il bot ha scelto: ${botNumber}.`)
 
 const sumNumber = userNumber + botNumber;
+console.log(`La somma è: ${sumNumber}.`);
 
 // creo la costante somma dei due numeri
 // controllo se il numero sommato è pari e assegno ad una variabile di controllo un valore booleano
@@ -92,6 +95,13 @@ function checkEvenOrOdd(number){
   return false;
 }
 
+// genero un altro valore booleano relativo alla somma
 const evenOrOdd = checkEvenOrOdd(sumNumber);
 
+// se i valori corrispondono l'utente ha vinto, altrimenti ha perso
+if(userSideBool === evenOrOdd){
+  console.log("Hai Vinto!");
+}else{
+  console.log("Hai perso!");
+}
 
