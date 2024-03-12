@@ -17,10 +17,32 @@ Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andia
 */
 
 // PALINDROMA
-// Creare una variambile che riceva un prompt con scritto "Inserire una parola:"
+// Creare una variabile che riceva un prompt con scritto "Inserire una parola:"
+const insertWord = prompt("Inserire una parola:");
+// check
+//console.log(insertWord);
 // Creare una funzione che riceva stringa userString e la confronti con la sua copia invertita
+function palindromeCheck(userString){
+  const userStringToLow = userString.toLowerCase();
+  const reverseArray = Array.prototype.toReversed.call(userStringToLow);
+  // console.log(userStringToLow);
+  // console.log(reverseArray);
+  let reverseString = "";
+  // faccio tornare reverseArray una stringa
+  for(let i = 0; i<reverseArray.length; i++){
+    reverseString += reverseArray[i];
+  }
+  console.log(reverseString);
+  return userStringToLow === reverseString;
+
+  
+}
   // si renda minuscola la stringa con il metodo .toLowerCase()
-  // variabile const revString = si applichi il metodo .toReversed() (metodo non distruttivo di .reverse())
-  // return userString === revString
+  // variabile const reverseArray = si applichi il metodo .toReversed() (metodo non distruttivo di .reverse())
+  // return userString === reverseArray
 // Invocare la funzione con il risultato del prompt
 // Stampare con console.log() il risultato della funzione
+
+console.log(palindromeCheck(insertWord));
+
+
