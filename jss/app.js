@@ -47,7 +47,7 @@ Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andia
 // inserisco in una costante un valore booleano se pari o dispari dall'utente
 let userSideString = prompt("Scegliere pari o dispari scrivendo la relativa parola");
 // creo variabile per il valore booleano del ruolo scelto
-let userSideBool;
+let userSideBool; // adesso è undefined per far girare il ciclo ma se viene assegnato true è pari, false è dispari
 // ciclo di controllo e assegnazione valore
 while(userSideBool === undefined){
 if(typeof userSideString === "string"){
@@ -78,6 +78,20 @@ function getRandomNumber(min, max){
 }
 // check della funzione
 console.log(getRandomNumber(1, 5));
-// inserisco in una costante ciò che è ricevuto dal prompt (un numero da 1 a 5)
-// inserisco in una costante un numero random da 1 a 5 usando una funzione
+
+const botNumber = getRandomNumber(1, 5);
+
+const sumNumber = userNumber + botNumber;
+
 // creo la costante somma dei due numeri
+// controllo se il numero sommato è pari e assegno ad una variabile di controllo un valore booleano
+function checkEvenOrOdd(number){
+  if(number % 2 === 0){
+    return true;
+  }
+  return false;
+}
+
+const evenOrOdd = checkEvenOrOdd(sumNumber);
+
+
